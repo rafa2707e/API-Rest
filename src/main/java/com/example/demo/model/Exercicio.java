@@ -1,11 +1,15 @@
-package com.example.demo.model; // O nome do seu pacote aqui
+package com.example.demo.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
-@Table(name = "tb_exercicios") // Define o nome da tabela no banco
+@Table(name = "tb_exercicios")
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Exercicio {
 
     @Id

@@ -1,31 +1,26 @@
 package com.example.demo.controller;
 
-import com.exemplo.strongmind.model.Exercicio;
-import com.exemplo.strongmind.repository.ExercicioRepository;
+import com.example.demo.model.Exercicio; // Import correto
+import com.example.demo.repository.ExercicioRepository; // Import correto
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/exercicios") // A URL será http://localhost:8080/exercicios
+@RequestMapping("/exercicios")
 public class ExercicioController {
 
     @Autowired
-    private ExercicioRepository repository; // O Spring "injeta" o repository aqui
+    private ExercicioRepository repository;
 
     @GetMapping
     public List<Exercicio> listarTodos() {
-        // Como o professor explicou, o repository já tem métodos prontos.
-        // Qual método do 'repository' você usaria para buscar TODOS os exercícios?
         return repository.findAll();
+    } // FECHA o listarTodos aqui!
 
-        @PostMapping
-        public Exercicio criar(@RequestBody Exercicio exercicio) {
-            return repository.save(exercicio);
-        }
+    @PostMapping
+    public Exercicio criar(@RequestBody Exercicio exercicio) {
+        return repository.save(exercicio);
     }
-
-
-
-}
+} // FECHA a classe aqui!

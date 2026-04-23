@@ -1,0 +1,10 @@
+POST http://localhost:8080/exercicios
+Content-Type: application/json
+
+{
+  "nome": "Supino Reto",
+  "grupoMuscular": "Peito",
+  "carga": 60.0,
+  "series": 4,
+  "repeticoes": 10
+}
